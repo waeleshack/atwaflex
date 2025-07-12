@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1",
+        "price": 10.99,
+        "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQtWeNKQp2o2BXnWVN2y4TA8qWOGI7fuj_9RNhLKvTtWJzIcSb1MFimySiC7pDYgcjRWI5S1tUUcTG9uIdDrQEzouJF4UeI9RsamwU7_ZJ306wQgVXO-ONS722GZyamXfkNrlrYUmFZcw&usqp=CAc"
+    },
+    {
+        "id": 2,
+        "name": "schoenen",
+        "price": 19.99,
+        "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSFUfVU_aHP8voxIajI1Ub3RGva5hEGgEpdGxxFkZQ_i70iuxZlijgzXYavrguvRCNMMld2tDTZK29zBngfF8WV-bxhI6U-5CMKnmf7M4945J8GeKn8UlUG-s4"
+    },
+    {
+        "id": 22,
+        "name": "plant",
+        "price": 12.0,
+        "image_url": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSFUfVU_aHP8voxIajI1Ub3RGva5hEGgEpdGxxFkZQ_i70iuxZlijgzXYavrguvRCNMMld2tDTZK29zBngfF8WV-bxhI6U-5CMKnmf7M4945J8GeKn8UlUG-s4"
+    },
+    {
+        "id": 569,
+        "name": "tshirty",
+        "price": 66.0,
+        "image_url": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQobpyZ0y9hq5dyfwlwz5DT7C2uXAr9lFsZ-5boixD4ABJuM1qsqYi9Ucmvo3iZALpmfjoISoRSlckCfEyjLeqIWfwNI81hvra1paAp6nmjytQjNukvizKs36vEU4nV3F4ZH4w06k8pXQ&usqp=CAc"
+    }
+]
