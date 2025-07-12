@@ -5,17 +5,17 @@ def load_Movies():
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
     cursor.execute("SELECT * FROM movies")
-    products = cursor.fetchall()
+    movies = cursor.fetchall()
     cursor.close()
     connection.close()
     return [Movies(**Movies) for movies in Movies]
 
 
-def save_product(product: Movies):
+def save_movies(movies: Movies):
     conn = get_connection()
     cursor = conn.cursor()
-    sql = "INSERT INTO products (name, price, image_url) VALUES (%s, %s, %s)"
-    val = (product.name, product.price, product.image_url)
+    sql = "INSERT INTO movies (name, descreption, image_url) VALUES (%s, %s, %s)"
+    val = (movies.name, movies.price, movies.image_url)
     cursor.execute(sql, val)
     conn.commit()
     conn.close()
@@ -24,7 +24,7 @@ def save_product(product: Movies):
 def update_movie(product: Movies):
     conn = get_connection()
     cursor = conn.cursor()
-    sql = "UPDATE movies SET name=%s, price=%s, image_url=%s WHERE id=%s"
+    sql = "UPDATE movies SET name=%s, descreption=%s, image_url=%s WHERE id=%s"
     val = (Movies.name, Movies.price, Movies.image_url, Movies.id)
     cursor.execute(sql, val)
     conn.commit()
@@ -33,7 +33,7 @@ def update_movie(product: Movies):
 def delete_movie(Movies_id: int):
     conn = get_connection()
     cursor = conn.cursor()
-    sql = "DELETE FROM products WHERE id=%s"
+    sql = "DELETE FROM movies WHERE id=%s"
     cursor.execute(sql, (Movies_id,))
     conn.commit()
     conn.close()
