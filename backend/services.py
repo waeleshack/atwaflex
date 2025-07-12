@@ -1,7 +1,7 @@
 from models import Movies
 from database import get_connection
 
-def load_Movies():
+def load_movies():
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
     cursor.execute("SELECT * FROM movies")
@@ -15,7 +15,7 @@ def save_movies(movies: Movies):
     conn = get_connection()
     cursor = conn.cursor()
     sql = "INSERT INTO movies (name, descreption, image_url) VALUES (%s, %s, %s)"
-    val = (movies.name, movies.price, movies.image_url)
+    val = (movies.name, movies.descreption, movies.image_url)
     cursor.execute(sql, val)
     conn.commit()
     conn.close()
@@ -30,10 +30,10 @@ def update_movie(product: Movies):
     conn.commit()
     conn.close()
 
-def delete_movie(Movies_id: int):
+def delete_movies(movies_id: int):
     conn = get_connection()
     cursor = conn.cursor()
     sql = "DELETE FROM movies WHERE id=%s"
-    cursor.execute(sql, (Movies_id,))
+    cursor.execute(sql, (movies_id))
     conn.commit()
     conn.close()

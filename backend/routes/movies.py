@@ -1,24 +1,24 @@
 from fastapi import APIRouter
-from models import movies
-from services import load_movies,delete_movies, save_movies, update_movies
+from models import Movies
+from services import load_movies,delete_movies, save_movies, update_movie
 
 router = APIRouter()
 
 
 
 @router.get("/movies")
-def get_products():
+def get_movies():
     return load_movies()
 
-@router.post("/products")
-def add_movies(product: movies):
+@router.post("/movies")
+def add_movies(product: Movies):
     save_movies(product)
     return {"maseg": "product added seccessfully"}
 
 
 @router.put("/products")
-def edit_Movies(Movies: movies):
-    update_movies(Movies)
+def edit_Movies(movies: Movies):
+    update_movie(movies)
     return {"maseg": "movies updated seccessfully"}
 
 
