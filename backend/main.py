@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from routes.products import router
+from backend.routes.movies import router
 
 from fastapi.middleware.cors import CORSMiddleware
 

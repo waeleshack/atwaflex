@@ -1,8 +1,9 @@
 from pydantic import BaseModel
 
-class Product(BaseModel):
+class Movies(BaseModel):
     id : int
     name : str
-    price : float
+    Descreption : float
     image_url : str
-   
+    tag : str
+    
